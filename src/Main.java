@@ -60,8 +60,6 @@ public class Main {
             System.out.println(name1 + "  " + "press enter to roll your dices.");
             scanner.nextLine();
 
-            double random = Math.random();
-            System.out.println(random);
             int max = 6;
             int min = 1;
             Double randomFrom1To6 = getRandomFromMinToMax(max, min);
@@ -76,12 +74,18 @@ public class Main {
             System.out.println(dice3);
             int dice4 = getRandomFromMinToMax(max, min).intValue();
             System.out.println(dice4);
+            System.out.println();
+            if (dice1 + dice2 > dice3 + dice4){
+                System.out.println(name1+ " " + "WON !");
+            }else if (dice3 + dice4 > dice1 + dice2){
+                System.out.println(name2+" "+"WON !");
+            }else {
+                System.out.println("Equals.");
+            }
         } else if (numberOfPlayers == 3) {
             System.out.println(name1 + "  " + "press enter to roll your dices.");
             scanner.nextLine();
 
-            double random = Math.random();
-            System.out.println(random);
             int max = 6;
             int min = 1;
             Double randomFrom1To6 = getRandomFromMinToMax(max, min);
@@ -103,12 +107,20 @@ public class Main {
             System.out.println(dice5);
             int dice6 = getRandomFromMinToMax(max, min).intValue();
             System.out.println(dice6);
+            System.out.println();
+            if (dice1 + dice2 > dice3 + dice4 && dice1 + dice2 > dice5 + dice6){
+                System.out.println(name1+ " " + "WON !");
+            }else if (dice3 + dice4 > dice1 + dice2 && dice3 + dice4 > dice5 + dice6){
+                System.out.println(name2+" "+"WON !");
+            }else if (dice5 + dice6 > dice1 + dice2 && dice5 + dice6 > dice3 + dice4){
+                System.out.println(name3+" "+"WON !");
+            }else {
+                System.out.println("Equals.");
+            }
         } else if (numberOfPlayers == 4) {
             System.out.println(name1 + "  " + "press enter to roll your dices.");
             scanner.nextLine();
 
-            double random = Math.random();
-            System.out.println(random);
             int max = 6;
             int min = 1;
             Double randomFrom1To6 = getRandomFromMinToMax(max, min);
@@ -131,12 +143,25 @@ public class Main {
             int dice6 = getRandomFromMinToMax(max, min).intValue();
             System.out.println(dice6);
 
-            System.out.println(name3 + "  " + "press enter to roll your dices.");
+            System.out.println(name4 + "  " + "press enter to roll your dices.");
             scanner.nextLine();
             int dice7 = getRandomFromMinToMax(max, min).intValue();
             System.out.println(dice7);
             int dice8 = getRandomFromMinToMax(max, min).intValue();
             System.out.println(dice8);
+
+            System.out.println();
+            if (dice1 + dice2 > dice3 + dice4 && dice1 + dice2 > dice5 + dice6 && dice1 + dice2 > dice7 + dice8){
+                System.out.println(name1+ " " + "WON !");
+            }else if (dice3 + dice4 > dice1 + dice2 && dice3 + dice4 > dice5 + dice6 && dice3 + dice4 > dice7 + dice8){
+                System.out.println(name2+" "+"WON !");
+            }else if (dice5 + dice6 > dice1 + dice2 && dice5 + dice6 > dice3 + dice4 && dice5 + dice6 > dice7 + dice8){
+                System.out.println(name3+" "+"WON !");
+            }else if (dice7 + dice8 > dice1 + dice2 && dice7 + dice8 > dice3 + dice4 && dice7 + dice8 > dice5 + dice6){
+                System.out.println(name4+" "+"WON !");
+            }else {
+                System.out.println("Equals.");
+            }
         }
     }
 
